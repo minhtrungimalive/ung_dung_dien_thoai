@@ -1,0 +1,80 @@
+/*Reset CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+/*Header*/
+
+.header {
+    margin-bottom: 5px;
+    ;
+}
+
+.logo #logo-icon {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.logo a {
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgba(194, 132, 18, 0.623);
+}
+
+.header .logo em {
+    color: rgba(179, 252, 105, 0.91);
+}
+/*Body */
+
+.body-content {
+    display: block;
+    /*them cho vui lat sua lai code*/
+}
+
+.body-content .array {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.change-icon {
+    margin-bottom: 1rem;
+}
+
+fieldset {
+    margin-top: 50px;
+}
+
+#Th_Mua_hang {
+    cursor: pointer;
+    width: 58px;
+    right: 0;
+    left: auto;
+}
+
+#Th_Cha {
+    margin-left : auto;
+    margin-right : auto;
+}
+
+#Th_Login{
+    position: absolute;
+    right: 63px;
+    top: 41px;
+    
+}

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Trang Chủ</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    .CHON {
+      background-color: silver;
+      opacity: 0.8;
+    }
+  </style>
+
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- <div class="container-fluid btn" id="Th_PET">
+
+    <div class="col-sm-4 col-xs-12">
+        <div id="gtco-logo"><a href="../Giao_dien/index.html">MinhTrung <em>.</em></a></div>
+    </div>
+
+</div> -->
+
+    <div class="container-fluid">
+      <fieldset class="border m-2 p-2 text-info">
+        <legend class="text-danger">minhtrungimalive.000webhostapp.com</legend>
+
+        <button id="Th_Home" class="btn btn-outline-danger">Tất cả</button>
+        <button id="Th_Android" class="btn btn-outline-warning">Android</button>
+        <button id="Th_Iphone" class="btn btn-outline-primary">Iphone</button>
+
+   
+
+        <div class="fixed-top text-right mr-2 mt-5" id="Th_Mua_hang">
+          <span class="text-white bg-danger btn border border-danger">
+            <u id="Th_Gio_hang">0</u>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </span>
+        </div>
+        <!--
+                    <button id="Th_Them" class="btn btn-danger" >Thêm Điện thoại </button>
+                    <button id="Th_Sua" class="btn btn-danger"  >Sửa Giá Điện thoại</button>
+                    <button id="Th_Xoa" class="btn btn-danger" >Xóa Điện thoại</button>
+                    -->
+        <hr />
+        <div class="container-fluid">
+          <div class="float-left">
+            Nhập Giá trị tìm:
+            <input
+              type="text"
+              size="30"
+              id="Th_gtTim"
+              placeholder="Nhập giá trị tìm... Enter"
+              onkeyup="KeyCode(event)"
+            />
+            <button id="Th_Tim" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </button>
+          </div>
+          <div class="text-right">
+            Chọn:
+            <select
+              class="btn btn-sm btn-outline-danger"
+              id="Th_Hien_thi_So_San_pham"
+            >
+              <option value="0">All </option>
+              <option value="4">4</option>
+              <option value="8">8 </option>
+              <option value="12">12 </option>
+              <option value="24">24 </option>
+            </select>
+            (Sản phẩm)
+
+            <select class="btn btn-outline-danger" id="Th_Sap_xep">
+              <option value="0">-- Sắp xếp theo --</option>
+              <option value="1">Sắp xếp theo Tên (A->Z)</option>
+              <option value="2">Sắp xếp theo Tên (Z->A)</option>
+              <option value="3">Sắp xếp theo Giá (Tăng Dần)</option>
+              <option value="4">Sắp xếp theo Giá (Giảm Dần)</option>
+            </select>
+
+            <select class="btn btn-outline-danger" id="Th_Loc_gia">
+              <option value="0-50000000">-- Chọn giá bán --</option>
+              <option value="0-5000000">Dưới 5 triệu</option>
+              <option value="5000000-10000000">Từ 5 triệu đến 10 triệu</option>
+              <option value="10000000-20000000"
+                >Từ 10 triệu đến 20 triệu</option
+              >
+              <option value="20000000-50000000">Trên 20 triệu</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+      <button id="Th_Login" class="btn btn-outline-danger">Login</button>
+    </div>
+    <div class="container-fluid btn clearfix text-right"></div>
+
+    <div class="container-fluid">
+      <div class="btn btn-outline-danger btn-block" id="Th_Thong_bao">
+        KHUNG THÔNG BÁO
+      </div>
+    </div>
+    <div class="container-fluid body-content">
+      <div class="array">
+        <fieldset class="btn">
+          <legend></legend>
+          <div class="row" style="margin: auto; width: 100%" id="Th_Cha"></div>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="clear-fix" style=" clear:both;"></div>
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-primary btn-lg d-none"
+      id="Th_Show"
+      data-toggle="modal"
+      data-target="#modelId"
+    >
+      Launch
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modelId"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modelTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title text-danger" id="modelTitleId"></h4>
+            <button
+              type="button"
+              id="Th_Close"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="Th_Chi_tiet"></div>
+          <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../Xu_ly/Xu_ly_3L.js"></script>
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAw3QZ5hhReTIJLSWz7o_582Wm3p6PV-EM&language=vi"
+    ></script>
+
+    <script src="../node_modules/idb/lib/idb.js"></script>
+    <script src="../Xu_ly/Xu_ly_IndexedDB.js"></script>
+
+    <script>
+      // Xừ lý Đăng nhập:--------------------------------------------------
+      if (sessionStorage.getItem("Nguoi_dung")) {
+        var Kq = JSON.parse(sessionStorage.getItem("Nguoi_dung"));
+        var noi_dung_HTML = `<div class="float-right pr-4"> 
+                    <span class="text-primary">Chào  ${Kq.Ten}</span>
+                    <button type="button" class="btn btn-lg btn-outline-danger" id="Th_Thoat" onclick="XL_Thoat_Dang_nhap()">
+                        <i class="fa fa-sign-out"></i>
+                    </button>
+                </div>`;
+        Th_Login.innerHTML = noi_dung_HTML;
+      }
+      function XL_Thoat_Dang_nhap() {
+        sessionStorage.clear();
+        window.location = "./MH_Danh_sach_Dien_thoai.html";
+      }
+
+      if (sessionStorage.getItem("Danh_sach_Chon") != undefined) {
+        Th_Gio_hang.innerHTML = JSON.parse(
+          sessionStorage.getItem("Danh_sach_Chon")
+        ).length;
+      }
+
+      Th_Login.onclick = () => {
+        window.location = "./MH_Dang_nhap.html";
+      };
+      var Danh_sach_Dien_thoai = Doc_Danh_sach_Dien_thoai();
+      console.log(Danh_sach_Dien_thoai);
+
+      //Xuat_Thong_tin_Cua_hang(Cua_hang, Th_PET)
+
+      if (!"indexedDB in window") {
+        console.log("Trình duyệt của bạn KHÔNG có hỗ trợ indexedDB");
+        Danh_sach_Dien_thoai = Doc_Danh_sach_Dien_thoai();
+        if (Danh_sach_Dien_thoai.length > 0) {
+          Xuat_Danh_sach(Danh_sach_Dien_thoai, Th_Thong_bao);
+        } else {
+          Th_Thong_bao.innerHTML = "Lỗi đọc dữ liệu";
+        }
+      } else {
+        console.log("Trình duyệt của bạn có hỗ trợ indexedDB");
+        var Danh_sach_Dien_thoai = Doc_Danh_sach_Dien_thoai();
+        Tao_Co_so_Du_lieu_indexedDB();
+        Tao_Du_lieu_indexedDB(Danh_sach_Dien_thoai);
+
+        idbDienthoai.getAll().then(Kq => {
+          Danh_sach_Dien_thoai = Kq;
+
+          Xuat_Danh_sach(Danh_sach_Dien_thoai, Th_Thong_bao);
+        });
+        // Xuat_Danh_sach(Danh_sach_Dien_thoai, Th_Thong_bao);
+        console.log(Danh_sach_Dien_thoai);
+      }
+      if (Danh_sach_Dien_thoai.length > 0) {
+        Th_Thong_bao.innerHTML = `<h3>Danh sách Điện thoại (${Danh_sach_Dien_thoai.length}) </h3>`;
+      } else Th_Thong_bao.innerHTML = `Không nạp được danh sách điện thoại .`;
+
+      function Xuat_Danh_sach(Danh_sach_Dien_thoai, Th_thong_bao) {
+        Th_Cha.innerHTML = "";
+
+        // var dsChon = [];
+        // if (sessionStorage.getItem("Danh_sach_Chon") != undefined) {
+        //   dsChon = JSON.parse(sessionStorage.getItem("Danh_sach_Chon"));
+        // }
+        Danh_sach_Dien_thoai.forEach(Dien_thoai => {
+          var The_hien = Tao_The_hien_Dien_thoai(Dien_thoai, Th_Cha);
+          The_hien.childNodes[0].onclick = () => {
+            The_hien.classList.toggle("CHON");
+            //console.log(The_hien.getAttribute("data"))
+            // Xử lý Lưu giỏ hàng
+            // Lưu Session HTML5
+            var ds = [];
+            if (sessionStorage.getItem("Danh_sach_Chon") != undefined) {
+              ds = JSON.parse(sessionStorage.getItem("Danh_sach_Chon"));
+            }
+            var vt = ds.indexOf(Dien_thoai.Ma_so);
+            if (vt == -1) {
+              ds.push(Dien_thoai.Ma_so); // Thêm
+            } else {
+              ds.splice(vt, 1); // Xóa
+            }
+
+            if (ds.length > 0) {
+              sessionStorage.setItem("Danh_sach_Chon", JSON.stringify(ds));
+            } else {
+              sessionStorage.removeItem("Danh_sach_Chon");
+            }
+
+            Th_Gio_hang.innerHTML = `${ds.length}`;
+          };
+          The_hien.childNodes[1].onclick = () => {
+            //console.log(The_hien.childNodes[1].parentNode.getAttribute("data"))
+            var Dien_thoai_Chon = JSON.parse(
+              The_hien.childNodes[1].parentNode.getAttribute("data")
+            );
+            var noi_dung_HTML = `
+                    <h4 class="text-primary">${Dien_thoai_Chon.Ten}</h4>
+                    <img src="http://localhost:1001/${Dien_thoai_Chon.Ma_so}.png" />
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ducimus cumque reiciendis tempore a provident impedit enim. 
+                    Corrupti libero quod corporis maxime similique, vitae sunt necessitatibus, tenetur, nisi ea porro.</p>
+                
+                `;
+            Th_Chi_tiet.innerHTML = noi_dung_HTML;
+            Th_Show.click();
+          };
+        });
+      }
+
+      // Xử lý Hiển thị Sản phẩm
+      Th_Hien_thi_So_San_pham.onchange = () => {
+        var So_san_pham =
+          Th_Hien_thi_So_San_pham.value == 0
+            ? Danh_sach_Dien_thoai.length
+            : Th_Hien_thi_So_San_pham.value;
+        //console.log(So_san_pham)
+        var ds = Danh_sach_Dien_thoai.slice(0, So_san_pham);
+        Xuat_Danh_sach(ds, Th_Thong_bao);
+      };
+      // Xử lý Giá bán
+      Th_Loc_gia.onchange = () => {
+        var gia = Th_Loc_gia.value.split("-");
+        var bd = Number(gia[0]);
+        var kt = Number(gia[1]);
+        var dsGia = Danh_sach_Dien_thoai.filter(
+          x => Number(x.Don_gia_Ban) >= bd && Number(x.Don_gia_Ban) <= kt
+        );
+        Xuat_Danh_sach(dsGia, Th_Thong_bao);
+        //console.log(gia);
+      };
+
+      // Xử lý sắp xếp
+      Th_Sap_xep.onchange = () => {
+        //console.log(Th_Sap_xep.selectedIndex)
+        //console.log(Th_Sap_xep[Th_Sap_xep.selectedIndex].text)
+        var sap_xep = Number(Th_Sap_xep.value);
+        switch (sap_xep) {
+          case 0:
+            break;
+          case 1:
+            Sap_Tang_theo_Ten();
+            break;
+          case 2:
+            Sap_Giam_theo_Ten();
+            break;
+          case 3:
+            Sap_Tang_Gia();
+            break;
+          case 4:
+            Sap_Giam_Gia();
+            break;
+        }
+      };
+
+      // Hàm Tìm
+      // bắt sự kiện tìm khi nhấn enter
+      function KeyCode(event) {
+        if (event.keyCode == 13) {
+          var gtTim = event.target.value;
+          var Danh_sach_Tim = Danh_sach_Dien_thoai.filter(x =>
+            x.Ten.toLowerCase().includes(gtTim.toLowerCase())
+          );
+          Th_Thong_bao.innerHTML = `Có ${Danh_sach_Tim.length} kết quả tìm thỏa "${gtTim}"`;
+          Xuat_Danh_sach(Danh_sach_Tim, Th_Thong_bao);
+        }
+      }
+
+      Th_Tim.onclick = () => {
+        // var gtTim = event.target.value;
+        var gtTim = Th_gtTim.value;
+        var Danh_sach_Tim = Danh_sach_Dien_thoai.filter(x =>
+          x.Ten.toLowerCase().includes(gtTim.toLowerCase())
+        );
+        Th_Thong_bao.innerHTML = `Có ${Danh_sach_Tim.length} kết quả tìm thỏa "${gtTim}"`;
+        Xuat_Danh_sach(Danh_sach_Tim, Th_Thong_bao);
+      };
+
+      // Loc danh sach tat ca
+      Th_Home.onclick = () => {
+        Danh_sach_Home = Doc_Danh_sach_Dien_thoai();
+        Th_Thong_bao.innerHTML = `<h3>Danh sách Điện thoại(${Danh_sach_Home.length}) </h3>`;
+        Xuat_Danh_sach(Danh_sach_Home, Th_Thong_bao);
+      };
+
+      Th_Android.onclick = () => {
+        Ds_dien_Thoai_Android = Danh_sach_Dien_thoai.filter(
+          x => x.Nhom_Dien_thoai.Ma_so.toLowerCase() == "android"
+        );
+        Th_Thong_bao.innerHTML = `<h3>Danh sách Điện thoại Android (${Ds_dien_Thoai_Android.length}) </h3>`;
+        Xuat_Danh_sach(Ds_dien_Thoai_Android, Th_Thong_bao);
+      };
+
+      Th_Iphone.onclick = () => {
+        Ds_dien_Thoai_Iphone = Danh_sach_Dien_thoai.filter(
+          x => x.Nhom_Dien_thoai.Ma_so.toLowerCase() == "iphone"
+        );
+        Th_Thong_bao.innerHTML = `<h3>Danh sách Điện thoại Iphone (${Ds_dien_Thoai_Iphone.length}) </h3>`;
+        Xuat_Danh_sach(Ds_dien_Thoai_Iphone, Th_Thong_bao);
+      };
+
+      // bắt sự kiện tìm khi nhất button tìm
+      // Các hàm Sắp xếp
+      function Sap_Tang_theo_Ten() {
+        // Là chuỗi
+        Danh_sach_Dien_thoai.sort((a, b) => a.Ten.localeCompare(b.Ten));
+        Xuat_Danh_sach(Danh_sach_Dien_thoai, Th_Thong_bao);
+      }
+
+      function Sap_Giam_theo_Ten() {
+        // Là chuỗi
+        Danh_sach_Dien_thoai.sort((a, b) => b.Ten.localeCompare(a.Ten));
+        Xuat_Danh_sach(Danh_sach_Dien_thoai, Th_Thong_bao);
+      }
+
+      function Sap_Tang_Gia() {
+        // Là số
+        Danh_sach_Dien_thoai.sort((a, b) => {
+          return parseInt(a.Don_gia_Ban) - parseInt(b.Don_gia_Ban);
+        });
+        Xuat_Danh_sach(Danh_sach_Dien_thoai, Th_Thong_bao);
+      }
+
+      function Sap_Giam_Gia() {
+        // Là số
+        Danh_sach_Dien_thoai.sort((a, b) => {
+          return parseInt(b.Don_gia_Ban) - parseInt(a.Don_gia_Ban);
+        });
+        Xuat_Danh_sach(Danh_sach_Dien_thoai, Th_Thong_bao);
+      }
+      // Giỏ hàng
+      Th_Mua_hang.onclick = () => {
+        if (sessionStorage.getItem("Danh_sach_Chon") != undefined) {
+          window.location = `./MH_Gio_hang.html`;
+        } else {
+          Th_Thong_bao.innerHTML = "Giỏ hàng của bạn rỗng ...";
+        }
+      };
+    </script>
+  </body>
+</html>
